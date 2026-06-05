@@ -2,6 +2,11 @@
 
 This folder turns the main ideas from the ROS 2 robotics book into 10 small demos. Each demo has a clear goal, the ROS 2 concepts it teaches, commands to try, and what you should observe.
 
+It also includes source code for the first mixed-language demo:
+
+- `src/cpp_pubsub`: C++ `talker` node.
+- `src/py_pubsub`: Python `listener` node.
+
 You already ran the `talker` example successfully on native Windows ROS 2, so start with demos 01-05. Demos 06 and later involve URDF, Gazebo, Navigation 2, and micro-ROS, which are usually smoother on Ubuntu or WSL2.
 
 ## Open Your ROS 2 Environment First
@@ -20,6 +25,16 @@ If this works, check ROS 2:
 ros2 --help
 ```
 
+## Build The Included Source Packages
+
+After opening your ROS 2 environment, build this repository:
+
+```bat
+cd /d C:\path\to\ros2_demo_pack
+colcon build --symlink-install
+call install\setup.bat
+```
+
 ## Demo Order
 
 1. [Basic Publisher and Subscriber](demos/01_talker_listener.md)
@@ -35,6 +50,8 @@ ros2 --help
 
 ## Included Small Files
 
+- `src/cpp_pubsub/src/talker.cpp`: a C++ publisher for `/chatter`.
+- `src/py_pubsub/py_pubsub/listener.py`: a Python subscriber for `/chatter`.
 - `launch/talker_listener.launch.py`: a minimal launch file example.
 - `urdf/tiny_diffbot.urdf.xml`: a tiny differential-drive robot model for learning links, joints, and TF.
 
@@ -47,4 +64,3 @@ Then learn tools: launch, bag, TF, and RViz.
 After that, move into robot structure: URDF, Gazebo, and ros2_control.
 
 Finally, study system-level concepts: SLAM, Nav2, micro-ROS, QoS, lifecycle nodes, and DDS.
-

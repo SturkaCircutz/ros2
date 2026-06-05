@@ -5,16 +5,15 @@ from launch_ros.actions import Node
 def generate_launch_description():
     return LaunchDescription([
         Node(
-            package="demo_nodes_cpp",
+            package="cpp_pubsub",
             executable="talker",
             name="demo_talker",
             output="screen",
         ),
         Node(
-            package="demo_nodes_py",
+            package="py_pubsub",
             executable="listener",
             name="demo_listener",
             output="screen",
         ),
     ])
-
