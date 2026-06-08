@@ -1,66 +1,115 @@
-# ROS 2 Demo Pack
+# ROS 2 ROSbot Brightness Demo
 
-This folder turns the main ideas from the ROS 2 robotics book into 10 small demos. Each demo has a clear goal, the ROS 2 concepts it teaches, commands to try, and what you should observe.
+This workspace contains one ROS 2 package, `tutorial_pkg`.
 
-It also includes source code for the first mixed-language demo:
+The package builds a C++ node named `my_first_node`. The node subscribes to a camera image topic, calculates the average brightness of each image, prints the result, and publishes the brightness as a `std_msgs/msg/UInt8` message on `/brightness`.
 
-- `src/cpp_pubsub`: C++ `talker` node.
-- `src/py_pubsub`: Python `listener` node.
+## Package Contents
 
-You already ran the `talker` example successfully on native Windows ROS 2, so start with demos 01-05. Demos 06 and later involve URDF, Gazebo, Navigation 2, and micro-ROS, which are usually smoother on Ubuntu or WSL2.
-
-## Open Your ROS 2 Environment First
-
-In Windows Command Prompt, run:
-
-```bat
-cd /d C:\pixi_ws
-pixi shell
-call C:\pixi_ws\ros2-windows\local_setup.bat
+```text
+tutorial_pkg/
+  CMakeLists.txt
+  package.xml
+  launch/
+    my_launch_file.yaml
+  src/
+    my_first_node.cpp
 ```
 
-If this works, check ROS 2:
+## What The Node Does
 
-```bat
-ros2 --help
+Input topic:
+
+```text
+/image
 ```
 
-## Build The Included Source Packages
+Output topic:
 
-After opening your ROS 2 environment, build this repository:
-
-```bat
-cd /d C:\path\to\ros2_demo_pack
-colcon build --symlink-install
-call install\setup.bat
+```text
+/brightness
 ```
 
-## Demo Order
+The launch file remaps `/image` to the ROSbot simulator camera topic:
 
-1. [Basic Publisher and Subscriber](demos/01_talker_listener.md)
-2. [Turtlesim Keyboard Control and Topics](demos/02_turtlesim_topic.md)
-3. [Services and Parameters](demos/03_service_parameter.md)
-4. [Launch Files and ros2 bag](demos/04_launch_bag.md)
-5. [TF and RViz Coordinate Transforms](demos/05_tf_rviz.md)
-6. [URDF Robot Model](demos/06_urdf_robot_model.md)
-7. [Gazebo and ros2_control](demos/07_gazebo_ros2_control.md)
-8. [SLAM and Navigation 2](demos/08_slam_nav2.md)
-9. [Physical Robot and micro-ROS](demos/09_micro_ros_physical_robot.md)
-10. [Advanced ROS 2 Concepts](demos/10_advanced_ros2.md)
+```text
+/camera/color/image_raw
+```
 
-## Included Small Files
+The launch file also sets:
 
-- `src/cpp_pubsub/src/talker.cpp`: a C++ publisher for `/chatter`.
-- `src/py_pubsub/py_pubsub/listener.py`: a Python subscriber for `/chatter`.
-- `launch/talker_listener.launch.py`: a minimal launch file example.
-- `urdf/tiny_diffbot.urdf.xml`: a tiny differential-drive robot model for learning links, joints, and TF.
+```text
+timer_period_s = 2
+```
 
-## Suggested Learning Path
+If the node is run without the launch file, the default timer period in code is `5` seconds.
 
-Start with communication: nodes, topics, services, and parameters.
+## Build
 
-Then learn tools: launch, bag, TF, and RViz.
+Build from the workspace root:
 
-After that, move into robot structure: URDF, Gazebo, and ros2_control.
+```bash
+cd ~/ros2
+source /opt/ros/jazzy/setup.bash
+colcon build --symlink-install --packages-select tutorial_pkg
+source install/setup.bash
+```
 
-Finally, study system-level concepts: SLAM, Nav2, micro-ROS, QoS, lifecycle nodes, and DDS.
+## Run With Launch File
+
+```bash
+ros2 launch tutorial_pkg my_launch_file.yaml
+```
+
+## Run With ROSbot Simulator
+
+The ROSbot simulator image is ROS 2 Humble, so run this node in a Humble container when using the simulator.
+
+Start the simulator:
+
+```bash
+cd ~/rosbot-xl-docker/demo
+sg docker -c "docker compose -f compose.simulation.yaml up"
+```
+
+In another terminal, run the node:
+
+```bash
+cd ~/ros2
+sg docker -c "docker run --rm --network host --ipc host -v /home/jiawen/ros2:/ws -w /ws ros:humble-ros-base bash -lc 'source /opt/ros/humble/setup.bash && source install_humble/setup.bash && ros2 run tutorial_pkg my_first_node --ros-args -r /image:=/camera/color/image_raw'"
+```
+
+Expected output:
+
+```text
+[my_node]: node started!
+[my_node]: brightness average: 136.16
+```
+
+## Check Topics
+
+List topics:
+
+```bash
+ros2 topic list -t
+```
+
+Echo brightness from the Humble simulator environment:
+
+```bash
+sg docker -c "docker exec demo-rosbot_xl-1 bash -lc 'source /opt/ros/humble/setup.bash && ros2 topic echo /brightness --qos-reliability reliable'"
+```
+
+Expected brightness output:
+
+```text
+data: 136
+---
+```
+
+## Stop Simulator
+
+```bash
+cd ~/rosbot-xl-docker/demo
+sg docker -c "docker compose -f compose.simulation.yaml down"
+```
