@@ -1,0 +1,35 @@
+[0.000000] (-) TimerEvent: {}
+[0.000485] (tutorial_pkg) JobQueued: {'identifier': 'tutorial_pkg', 'dependencies': OrderedDict()}
+[0.000892] (tutorial_pkg) JobStarted: {'identifier': 'tutorial_pkg'}
+[0.022028] (tutorial_pkg) JobProgress: {'identifier': 'tutorial_pkg', 'progress': 'cmake'}
+[0.023755] (tutorial_pkg) JobProgress: {'identifier': 'tutorial_pkg', 'progress': 'build'}
+[0.025031] (tutorial_pkg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/ws/build_humble/tutorial_pkg', '--', '-j32', '-l32'], 'cwd': '/ws/build_humble/tutorial_pkg', 'env': OrderedDict([('HOSTNAME', 'jiawensun'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/root'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('LANG', 'C.UTF-8'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('PWD', '/ws/build_humble/tutorial_pkg'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.099415] (-) TimerEvent: {}
+[0.124675] (tutorial_pkg) StdoutLine: {'line': b'Consolidate compiler generated dependencies of target my_first_node\n'}
+[0.158014] (tutorial_pkg) StdoutLine: {'line': b'[100%] Built target my_first_node\n'}
+[0.174798] (tutorial_pkg) CommandEnded: {'returncode': 0}
+[0.176231] (tutorial_pkg) JobProgress: {'identifier': 'tutorial_pkg', 'progress': 'install'}
+[0.192665] (tutorial_pkg) Command: {'cmd': ['/usr/bin/cmake', '--install', '/ws/build_humble/tutorial_pkg'], 'cwd': '/ws/build_humble/tutorial_pkg', 'env': OrderedDict([('HOSTNAME', 'jiawensun'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/root'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('LANG', 'C.UTF-8'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('PWD', '/ws/build_humble/tutorial_pkg'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.199498] (-) TimerEvent: {}
+[0.207044] (tutorial_pkg) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.207751] (tutorial_pkg) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[0.208549] (tutorial_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /ws/install_humble/tutorial_pkg/lib/tutorial_pkg/my_first_node\n'}
+[0.209508] (tutorial_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /ws/install_humble/tutorial_pkg/share/tutorial_pkg/launch/my_launch_file.yaml\n'}
+[0.210208] (tutorial_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /ws/install_humble/tutorial_pkg/share/ament_index/resource_index/package_run_dependencies/tutorial_pkg\n'}
+[0.211561] (tutorial_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /ws/install_humble/tutorial_pkg/share/ament_index/resource_index/parent_prefix_path/tutorial_pkg\n'}
+[0.211717] (tutorial_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /ws/install_humble/tutorial_pkg/share/tutorial_pkg/environment/ament_prefix_path.sh\n'}
+[0.212083] (tutorial_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /ws/install_humble/tutorial_pkg/share/tutorial_pkg/environment/ament_prefix_path.dsv\n'}
+[0.213118] (tutorial_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /ws/install_humble/tutorial_pkg/share/tutorial_pkg/environment/path.sh\n'}
+[0.213272] (tutorial_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /ws/install_humble/tutorial_pkg/share/tutorial_pkg/environment/path.dsv\n'}
+[0.214080] (tutorial_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /ws/install_humble/tutorial_pkg/share/tutorial_pkg/local_setup.bash\n'}
+[0.214238] (tutorial_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /ws/install_humble/tutorial_pkg/share/tutorial_pkg/local_setup.sh\n'}
+[0.214781] (tutorial_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /ws/install_humble/tutorial_pkg/share/tutorial_pkg/local_setup.zsh\n'}
+[0.215259] (tutorial_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /ws/install_humble/tutorial_pkg/share/tutorial_pkg/local_setup.dsv\n'}
+[0.216043] (tutorial_pkg) StdoutLine: {'line': b'-- Symlinking: /ws/install_humble/tutorial_pkg/share/tutorial_pkg/package.dsv\n'}
+[0.234318] (tutorial_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /ws/install_humble/tutorial_pkg/share/ament_index/resource_index/packages/tutorial_pkg\n'}
+[0.235025] (tutorial_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /ws/install_humble/tutorial_pkg/share/tutorial_pkg/cmake/tutorial_pkgConfig.cmake\n'}
+[0.235248] (tutorial_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /ws/install_humble/tutorial_pkg/share/tutorial_pkg/cmake/tutorial_pkgConfig-version.cmake\n'}
+[0.235408] (tutorial_pkg) StdoutLine: {'line': b'-- Up-to-date symlink: /ws/install_humble/tutorial_pkg/share/tutorial_pkg/package.xml\n'}
+[0.237591] (tutorial_pkg) CommandEnded: {'returncode': 0}
+[0.274717] (tutorial_pkg) JobEnded: {'identifier': 'tutorial_pkg', 'rc': 0}
+[0.275865] (-) EventReactorShutdown: {}

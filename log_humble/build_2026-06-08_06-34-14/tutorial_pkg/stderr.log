@@ -1,0 +1,4 @@
+/ws/tutorial_pkg/src/my_first_node.cpp: In member function ‘void MyNode::counter_callback(std_srvs::srv::Trigger_Request_<std::allocator<void> >::SharedPtr, std_srvs::srv::Trigger_Response_<std::allocator<void> >::SharedPtr)’:
+/ws/tutorial_pkg/src/my_first_node.cpp:72:80: warning: unused parameter ‘req’ [-Wunused-parameter]
+   72 |         void counter_callback(const std_srvs::srv::Trigger::Request::SharedPtr req,
+      |                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~

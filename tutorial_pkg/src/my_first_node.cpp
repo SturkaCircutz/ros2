@@ -2,6 +2,8 @@
 #include "rclcpp/rclcpp.hpp"
 #include "sensor_msgs/msg/image.hpp"
 #include "std_msgs/msg/u_int8.hpp"
+#include "std_srvs/srv/empty.hpp"
+#include "std_srvs/srv/trigger.hpp"
 
 #include <algorithm>
 #include <cmath>
@@ -24,14 +26,27 @@ class MyNode : public rclcpp::Node
                 "/image", qos, std::bind(&MyNode::image_callback, this, _1));
             
             publisher_ = create_publisher<std_msgs::msg::UInt8>("/brightness", 10);
-            RCLCPP_INFO(get_logger(), "node started!");
             timer_ = create_wall_timer(timer_period_s, std::bind(&MyNode::timer_callback, this));
             // call the timer callback function after counting down 5 seconds.
+            client_ = create_client<std_srvs::srv::Empty>("/save");
+            // define a client to call service and named it /save
+            server_ = create_service<std_srvs::srv::Trigger>(
+                "/image_counter", std::bind(&MyNode::counter_callback, this, _1, _2)
+            );
+            RCLCPP_INFO(get_logger(), "Node started!");
+
         }
     private:
         void timer_callback(){
             RCLCPP_INFO(get_logger(), "Timer activate");
             // print info to notify that timer is activated.
+            if(!client_->wait_for_service(1s)){
+                RCLCPP_ERROR(get_logger(), "failed to connect to the image save service");
+                return;
+            }
+            saved_imgs_++;
+            auto request = std::make_shared<std_srvs::srv::Empty::Request>();
+            auto future = client_->async_send_request(request);
         }
         void image_callback(const sensor_msgs::msg::Image::SharedPtr image){
             if (image->data.empty()) {
@@ -54,11 +69,17 @@ class MyNode : public rclcpp::Node
 
             RCLCPP_INFO(get_logger(), "brightness average: %.2f", avg);
         }
-
+        void counter_callback(const std_srvs::srv::Trigger::Request::SharedPtr req, 
+            const std_srvs::srv::Trigger::Response::SharedPtr res){
+                res->success = 1;
+                res->message = "saved images: " + std::to_string(saved_imgs_); 
+            }
+        uint saved_imgs_ = 0;
         rclcpp::Subscription<sensor_msgs::msg::Image>::SharedPtr subscriber_;
         rclcpp::Publisher<std_msgs::msg::UInt8>::SharedPtr publisher_;
         rclcpp::TimerBase::SharedPtr timer_;
-        
+        rclcpp::Client<std_srvs::srv::Empty>::SharedPtr client_;
+        rclcpp::Service<std_srvs::srv::Trigger>::SharedPtr server_; // return how many images have been saved
 };
 
 int main(int argc, char ** argv){

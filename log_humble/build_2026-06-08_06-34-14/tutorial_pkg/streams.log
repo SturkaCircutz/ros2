@@ -1,0 +1,30 @@
+[0.022s] Invoking command in '/ws/build_humble/tutorial_pkg': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /ws/build_humble/tutorial_pkg -- -j32 -l32
+[0.150s] [ 50%] Building CXX object CMakeFiles/my_first_node.dir/src/my_first_node.cpp.o
+[5.795s] /ws/tutorial_pkg/src/my_first_node.cpp: In member function ‘void MyNode::counter_callback(std_srvs::srv::Trigger_Request_<std::allocator<void> >::SharedPtr, std_srvs::srv::Trigger_Response_<std::allocator<void> >::SharedPtr)’:
+[5.795s] /ws/tutorial_pkg/src/my_first_node.cpp:72:80: warning: unused parameter ‘req’ [-Wunused-parameter]
+[5.795s]    72 |         void counter_callback(const std_srvs::srv::Trigger::Request::SharedPtr req,
+[5.795s]       |                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+[22.486s] [100%] Linking CXX executable my_first_node
+[23.694s] [100%] Built target my_first_node
+[23.719s] Invoked command in '/ws/build_humble/tutorial_pkg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /ws/build_humble/tutorial_pkg -- -j32 -l32
+[23.738s] Invoking command in '/ws/build_humble/tutorial_pkg': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /ws/build_humble/tutorial_pkg
+[23.753s] -- Install configuration: ""
+[23.755s] -- Execute custom install script
+[23.756s] -- Up-to-date symlink: /ws/install_humble/tutorial_pkg/lib/tutorial_pkg/my_first_node
+[23.757s] -- Up-to-date symlink: /ws/install_humble/tutorial_pkg/share/tutorial_pkg/launch/my_launch_file.yaml
+[23.758s] -- Up-to-date symlink: /ws/install_humble/tutorial_pkg/share/ament_index/resource_index/package_run_dependencies/tutorial_pkg
+[23.758s] -- Up-to-date symlink: /ws/install_humble/tutorial_pkg/share/ament_index/resource_index/parent_prefix_path/tutorial_pkg
+[23.758s] -- Up-to-date symlink: /ws/install_humble/tutorial_pkg/share/tutorial_pkg/environment/ament_prefix_path.sh
+[23.758s] -- Up-to-date symlink: /ws/install_humble/tutorial_pkg/share/tutorial_pkg/environment/ament_prefix_path.dsv
+[23.758s] -- Up-to-date symlink: /ws/install_humble/tutorial_pkg/share/tutorial_pkg/environment/path.sh
+[23.759s] -- Up-to-date symlink: /ws/install_humble/tutorial_pkg/share/tutorial_pkg/environment/path.dsv
+[23.759s] -- Up-to-date symlink: /ws/install_humble/tutorial_pkg/share/tutorial_pkg/local_setup.bash
+[23.760s] -- Up-to-date symlink: /ws/install_humble/tutorial_pkg/share/tutorial_pkg/local_setup.sh
+[23.760s] -- Up-to-date symlink: /ws/install_humble/tutorial_pkg/share/tutorial_pkg/local_setup.zsh
+[23.761s] -- Up-to-date symlink: /ws/install_humble/tutorial_pkg/share/tutorial_pkg/local_setup.dsv
+[23.761s] -- Symlinking: /ws/install_humble/tutorial_pkg/share/tutorial_pkg/package.dsv
+[23.779s] -- Up-to-date symlink: /ws/install_humble/tutorial_pkg/share/ament_index/resource_index/packages/tutorial_pkg
+[23.780s] -- Up-to-date symlink: /ws/install_humble/tutorial_pkg/share/tutorial_pkg/cmake/tutorial_pkgConfig.cmake
+[23.781s] -- Up-to-date symlink: /ws/install_humble/tutorial_pkg/share/tutorial_pkg/cmake/tutorial_pkgConfig-version.cmake
+[23.783s] -- Up-to-date symlink: /ws/install_humble/tutorial_pkg/share/tutorial_pkg/package.xml
+[23.786s] Invoked command in '/ws/build_humble/tutorial_pkg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /ws/build_humble/tutorial_pkg

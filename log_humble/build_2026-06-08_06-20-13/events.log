@@ -1,0 +1,335 @@
+[0.000000] (-) TimerEvent: {}
+[0.000414] (tutorial_pkg) JobQueued: {'identifier': 'tutorial_pkg', 'dependencies': OrderedDict()}
+[0.000958] (tutorial_pkg) JobStarted: {'identifier': 'tutorial_pkg'}
+[0.023504] (tutorial_pkg) JobProgress: {'identifier': 'tutorial_pkg', 'progress': 'cmake'}
+[0.024692] (tutorial_pkg) Command: {'cmd': ['/usr/bin/cmake', '/ws/tutorial_pkg', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/ws/install_humble/tutorial_pkg'], 'cwd': '/ws/build_humble/tutorial_pkg', 'env': OrderedDict([('HOSTNAME', 'jiawensun'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/root'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('LANG', 'C.UTF-8'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('PWD', '/ws/build_humble/tutorial_pkg'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.099059] (-) TimerEvent: {}
+[0.199359] (-) TimerEvent: {}
+[0.209454] (tutorial_pkg) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.299515] (-) TimerEvent: {}
+[0.351477] (tutorial_pkg) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.372971] (tutorial_pkg) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.399678] (-) TimerEvent: {}
+[0.500012] (-) TimerEvent: {}
+[0.536177] (tutorial_pkg) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.551448] (tutorial_pkg) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.552563] (tutorial_pkg) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.553832] (tutorial_pkg) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.562073] (tutorial_pkg) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.600173] (-) TimerEvent: {}
+[0.700484] (-) TimerEvent: {}
+[0.731385] (tutorial_pkg) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.753680] (tutorial_pkg) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.754382] (tutorial_pkg) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.755857] (tutorial_pkg) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.771765] (tutorial_pkg) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.800626] (-) TimerEvent: {}
+[0.900926] (-) TimerEvent: {}
+[1.001191] (-) TimerEvent: {}
+[1.101527] (-) TimerEvent: {}
+[1.110234] (tutorial_pkg) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[1.201647] (-) TimerEvent: {}
+[1.280216] (tutorial_pkg) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[1.301776] (-) TimerEvent: {}
+[1.337981] (tutorial_pkg) StdoutLine: {'line': b'-- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[1.401911] (-) TimerEvent: {}
+[1.453151] (tutorial_pkg) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[1.467407] (tutorial_pkg) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[1.490807] (tutorial_pkg) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[1.502046] (-) TimerEvent: {}
+[1.524897] (tutorial_pkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.573513] (tutorial_pkg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.602193] (-) TimerEvent: {}
+[1.698813] (tutorial_pkg) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[1.702348] (-) TimerEvent: {}
+[1.705326] (tutorial_pkg) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.802499] (-) TimerEvent: {}
+[1.895459] (tutorial_pkg) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[1.902608] (-) TimerEvent: {}
+[1.941175] (tutorial_pkg) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[2.002786] (-) TimerEvent: {}
+[2.014290] (tutorial_pkg) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[2.037372] (tutorial_pkg) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[2.102959] (-) TimerEvent: {}
+[2.198785] (tutorial_pkg) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[2.200192] (tutorial_pkg) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[2.203094] (-) TimerEvent: {}
+[2.303355] (-) TimerEvent: {}
+[2.394472] (tutorial_pkg) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[2.397644] (tutorial_pkg) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[2.403512] (-) TimerEvent: {}
+[2.503855] (-) TimerEvent: {}
+[2.562864] (tutorial_pkg) StdoutLine: {'line': b'-- Found sensor_msgs: 4.9.1 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[2.604003] (-) TimerEvent: {}
+[2.650675] (tutorial_pkg) StdoutLine: {'line': b'-- Found std_srvs: 4.9.1 (/opt/ros/humble/share/std_srvs/cmake)\n'}
+[2.704155] (-) TimerEvent: {}
+[2.805364] (-) TimerEvent: {}
+[2.851339] (tutorial_pkg) StdoutLine: {'line': b'-- Configuring done\n'}
+[2.872991] (tutorial_pkg) StdoutLine: {'line': b'-- Generating done\n'}
+[2.881687] (tutorial_pkg) StdoutLine: {'line': b'-- Build files have been written to: /ws/build_humble/tutorial_pkg\n'}
+[2.894263] (tutorial_pkg) CommandEnded: {'returncode': 0}
+[2.895372] (tutorial_pkg) JobProgress: {'identifier': 'tutorial_pkg', 'progress': 'build'}
+[2.898781] (tutorial_pkg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/ws/build_humble/tutorial_pkg', '--', '-j32', '-l32'], 'cwd': '/ws/build_humble/tutorial_pkg', 'env': OrderedDict([('HOSTNAME', 'jiawensun'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/root'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('LANG', 'C.UTF-8'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('PWD', '/ws/build_humble/tutorial_pkg'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[2.905488] (-) TimerEvent: {}
+[3.005796] (-) TimerEvent: {}
+[3.010476] (tutorial_pkg) StdoutLine: {'line': b'[ 50%] Building CXX object CMakeFiles/my_first_node.dir/src/my_first_node.cpp.o\n'}
+[3.105943] (-) TimerEvent: {}
+[3.206291] (-) TimerEvent: {}
+[3.306560] (-) TimerEvent: {}
+[3.406934] (-) TimerEvent: {}
+[3.507260] (-) TimerEvent: {}
+[3.607573] (-) TimerEvent: {}
+[3.707932] (-) TimerEvent: {}
+[3.808345] (-) TimerEvent: {}
+[3.909364] (-) TimerEvent: {}
+[4.010358] (-) TimerEvent: {}
+[4.110672] (-) TimerEvent: {}
+[4.211004] (-) TimerEvent: {}
+[4.311321] (-) TimerEvent: {}
+[4.411652] (-) TimerEvent: {}
+[4.512036] (-) TimerEvent: {}
+[4.612366] (-) TimerEvent: {}
+[4.712665] (-) TimerEvent: {}
+[4.812939] (-) TimerEvent: {}
+[4.913228] (-) TimerEvent: {}
+[5.013565] (-) TimerEvent: {}
+[5.113907] (-) TimerEvent: {}
+[5.214159] (-) TimerEvent: {}
+[5.314465] (-) TimerEvent: {}
+[5.414770] (-) TimerEvent: {}
+[5.515049] (-) TimerEvent: {}
+[5.615344] (-) TimerEvent: {}
+[5.715614] (-) TimerEvent: {}
+[5.815920] (-) TimerEvent: {}
+[5.916227] (-) TimerEvent: {}
+[6.016542] (-) TimerEvent: {}
+[6.116826] (-) TimerEvent: {}
+[6.217113] (-) TimerEvent: {}
+[6.317602] (-) TimerEvent: {}
+[6.417946] (-) TimerEvent: {}
+[6.518296] (-) TimerEvent: {}
+[6.618612] (-) TimerEvent: {}
+[6.719356] (-) TimerEvent: {}
+[6.819691] (-) TimerEvent: {}
+[6.920005] (-) TimerEvent: {}
+[7.020342] (-) TimerEvent: {}
+[7.121381] (-) TimerEvent: {}
+[7.221759] (-) TimerEvent: {}
+[7.322026] (-) TimerEvent: {}
+[7.422309] (-) TimerEvent: {}
+[7.522954] (-) TimerEvent: {}
+[7.623264] (-) TimerEvent: {}
+[7.724742] (-) TimerEvent: {}
+[7.825090] (-) TimerEvent: {}
+[7.925355] (-) TimerEvent: {}
+[8.025671] (-) TimerEvent: {}
+[8.126352] (-) TimerEvent: {}
+[8.227350] (-) TimerEvent: {}
+[8.327677] (-) TimerEvent: {}
+[8.428034] (-) TimerEvent: {}
+[8.528355] (-) TimerEvent: {}
+[8.628663] (-) TimerEvent: {}
+[8.728980] (-) TimerEvent: {}
+[8.829381] (-) TimerEvent: {}
+[8.929765] (-) TimerEvent: {}
+[9.030978] (-) TimerEvent: {}
+[9.132427] (-) TimerEvent: {}
+[9.232728] (-) TimerEvent: {}
+[9.333620] (-) TimerEvent: {}
+[9.433977] (-) TimerEvent: {}
+[9.534316] (-) TimerEvent: {}
+[9.636163] (-) TimerEvent: {}
+[9.736477] (-) TimerEvent: {}
+[9.836768] (-) TimerEvent: {}
+[9.937346] (-) TimerEvent: {}
+[10.037692] (-) TimerEvent: {}
+[10.137971] (-) TimerEvent: {}
+[10.238284] (-) TimerEvent: {}
+[10.338589] (-) TimerEvent: {}
+[10.438885] (-) TimerEvent: {}
+[10.539183] (-) TimerEvent: {}
+[10.639590] (-) TimerEvent: {}
+[10.739944] (-) TimerEvent: {}
+[10.840266] (-) TimerEvent: {}
+[10.940608] (-) TimerEvent: {}
+[11.041353] (-) TimerEvent: {}
+[11.141741] (-) TimerEvent: {}
+[11.242138] (-) TimerEvent: {}
+[11.342521] (-) TimerEvent: {}
+[11.442840] (-) TimerEvent: {}
+[11.543215] (-) TimerEvent: {}
+[11.643688] (-) TimerEvent: {}
+[11.744029] (-) TimerEvent: {}
+[11.844350] (-) TimerEvent: {}
+[11.944656] (-) TimerEvent: {}
+[12.044980] (-) TimerEvent: {}
+[12.145922] (-) TimerEvent: {}
+[12.246229] (-) TimerEvent: {}
+[12.346596] (-) TimerEvent: {}
+[12.446925] (-) TimerEvent: {}
+[12.547291] (-) TimerEvent: {}
+[12.647593] (-) TimerEvent: {}
+[12.747907] (-) TimerEvent: {}
+[12.848230] (-) TimerEvent: {}
+[12.948875] (-) TimerEvent: {}
+[13.049232] (-) TimerEvent: {}
+[13.149592] (-) TimerEvent: {}
+[13.250858] (-) TimerEvent: {}
+[13.351151] (-) TimerEvent: {}
+[13.451527] (-) TimerEvent: {}
+[13.551891] (-) TimerEvent: {}
+[13.652197] (-) TimerEvent: {}
+[13.752938] (-) TimerEvent: {}
+[13.853291] (-) TimerEvent: {}
+[13.953602] (-) TimerEvent: {}
+[14.053952] (-) TimerEvent: {}
+[14.154358] (-) TimerEvent: {}
+[14.255345] (-) TimerEvent: {}
+[14.355654] (-) TimerEvent: {}
+[14.456350] (-) TimerEvent: {}
+[14.556648] (-) TimerEvent: {}
+[14.657352] (-) TimerEvent: {}
+[14.757660] (-) TimerEvent: {}
+[14.857941] (-) TimerEvent: {}
+[14.958366] (-) TimerEvent: {}
+[15.058808] (-) TimerEvent: {}
+[15.159143] (-) TimerEvent: {}
+[15.259494] (-) TimerEvent: {}
+[15.359816] (-) TimerEvent: {}
+[15.460148] (-) TimerEvent: {}
+[15.560507] (-) TimerEvent: {}
+[15.660838] (-) TimerEvent: {}
+[15.761187] (-) TimerEvent: {}
+[15.861552] (-) TimerEvent: {}
+[15.961905] (-) TimerEvent: {}
+[16.062283] (-) TimerEvent: {}
+[16.162628] (-) TimerEvent: {}
+[16.262938] (-) TimerEvent: {}
+[16.363341] (-) TimerEvent: {}
+[16.463695] (-) TimerEvent: {}
+[16.564027] (-) TimerEvent: {}
+[16.664282] (-) TimerEvent: {}
+[16.764531] (-) TimerEvent: {}
+[16.864806] (-) TimerEvent: {}
+[16.965087] (-) TimerEvent: {}
+[17.065353] (-) TimerEvent: {}
+[17.165629] (-) TimerEvent: {}
+[17.265913] (-) TimerEvent: {}
+[17.366318] (-) TimerEvent: {}
+[17.466673] (-) TimerEvent: {}
+[17.566991] (-) TimerEvent: {}
+[17.667343] (-) TimerEvent: {}
+[17.767669] (-) TimerEvent: {}
+[17.867973] (-) TimerEvent: {}
+[17.968300] (-) TimerEvent: {}
+[18.068565] (-) TimerEvent: {}
+[18.168811] (-) TimerEvent: {}
+[18.269081] (-) TimerEvent: {}
+[18.369352] (-) TimerEvent: {}
+[18.470101] (-) TimerEvent: {}
+[18.570513] (-) TimerEvent: {}
+[18.670837] (-) TimerEvent: {}
+[18.771134] (-) TimerEvent: {}
+[18.872100] (-) TimerEvent: {}
+[18.972361] (-) TimerEvent: {}
+[19.072647] (-) TimerEvent: {}
+[19.172955] (-) TimerEvent: {}
+[19.273553] (-) TimerEvent: {}
+[19.373872] (-) TimerEvent: {}
+[19.474220] (-) TimerEvent: {}
+[19.574539] (-) TimerEvent: {}
+[19.674890] (-) TimerEvent: {}
+[19.775182] (-) TimerEvent: {}
+[19.875504] (-) TimerEvent: {}
+[19.976050] (-) TimerEvent: {}
+[20.076401] (-) TimerEvent: {}
+[20.176755] (-) TimerEvent: {}
+[20.277020] (-) TimerEvent: {}
+[20.377272] (-) TimerEvent: {}
+[20.477535] (-) TimerEvent: {}
+[20.577819] (-) TimerEvent: {}
+[20.678114] (-) TimerEvent: {}
+[20.778393] (-) TimerEvent: {}
+[20.878647] (-) TimerEvent: {}
+[20.979024] (-) TimerEvent: {}
+[21.079904] (-) TimerEvent: {}
+[21.180165] (-) TimerEvent: {}
+[21.280561] (-) TimerEvent: {}
+[21.380875] (-) TimerEvent: {}
+[21.481193] (-) TimerEvent: {}
+[21.581558] (-) TimerEvent: {}
+[21.681969] (-) TimerEvent: {}
+[21.782320] (-) TimerEvent: {}
+[21.882605] (-) TimerEvent: {}
+[21.982897] (-) TimerEvent: {}
+[22.083195] (-) TimerEvent: {}
+[22.183468] (-) TimerEvent: {}
+[22.283722] (-) TimerEvent: {}
+[22.384026] (-) TimerEvent: {}
+[22.484343] (-) TimerEvent: {}
+[22.584657] (-) TimerEvent: {}
+[22.684987] (-) TimerEvent: {}
+[22.785359] (-) TimerEvent: {}
+[22.885663] (-) TimerEvent: {}
+[22.985955] (-) TimerEvent: {}
+[23.086277] (-) TimerEvent: {}
+[23.186562] (-) TimerEvent: {}
+[23.286862] (-) TimerEvent: {}
+[23.387184] (-) TimerEvent: {}
+[23.487563] (-) TimerEvent: {}
+[23.588367] (-) TimerEvent: {}
+[23.688751] (-) TimerEvent: {}
+[23.789094] (-) TimerEvent: {}
+[23.889412] (-) TimerEvent: {}
+[23.989718] (-) TimerEvent: {}
+[24.089991] (-) TimerEvent: {}
+[24.190325] (-) TimerEvent: {}
+[24.290714] (-) TimerEvent: {}
+[24.391109] (-) TimerEvent: {}
+[24.491374] (-) TimerEvent: {}
+[24.591700] (-) TimerEvent: {}
+[24.692090] (-) TimerEvent: {}
+[24.792358] (-) TimerEvent: {}
+[24.815976] (tutorial_pkg) StdoutLine: {'line': b'[100%] Linking CXX executable my_first_node\n'}
+[24.892489] (-) TimerEvent: {}
+[24.992765] (-) TimerEvent: {}
+[25.093376] (-) TimerEvent: {}
+[25.193724] (-) TimerEvent: {}
+[25.293994] (-) TimerEvent: {}
+[25.394307] (-) TimerEvent: {}
+[25.494598] (-) TimerEvent: {}
+[25.594988] (-) TimerEvent: {}
+[25.697047] (-) TimerEvent: {}
+[25.797375] (-) TimerEvent: {}
+[25.897708] (-) TimerEvent: {}
+[25.994220] (tutorial_pkg) StdoutLine: {'line': b'[100%] Built target my_first_node\n'}
+[25.997836] (-) TimerEvent: {}
+[26.019535] (tutorial_pkg) CommandEnded: {'returncode': 0}
+[26.021121] (tutorial_pkg) JobProgress: {'identifier': 'tutorial_pkg', 'progress': 'install'}
+[26.039938] (tutorial_pkg) Command: {'cmd': ['/usr/bin/cmake', '--install', '/ws/build_humble/tutorial_pkg'], 'cwd': '/ws/build_humble/tutorial_pkg', 'env': OrderedDict([('HOSTNAME', 'jiawensun'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/root'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('LANG', 'C.UTF-8'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('PWD', '/ws/build_humble/tutorial_pkg'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[26.057436] (tutorial_pkg) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[26.058691] (tutorial_pkg) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[26.059728] (tutorial_pkg) StdoutLine: {'line': b'-- Symlinking: /ws/install_humble/tutorial_pkg/lib/tutorial_pkg/my_first_node\n'}
+[26.086793] (tutorial_pkg) StdoutLine: {'line': b'-- Symlinking: /ws/install_humble/tutorial_pkg/share/tutorial_pkg/launch/my_launch_file.yaml\n'}
+[26.098017] (-) TimerEvent: {}
+[26.107181] (tutorial_pkg) StdoutLine: {'line': b'-- Symlinking: /ws/install_humble/tutorial_pkg/share/ament_index/resource_index/package_run_dependencies/tutorial_pkg\n'}
+[26.129978] (tutorial_pkg) StdoutLine: {'line': b'-- Symlinking: /ws/install_humble/tutorial_pkg/share/ament_index/resource_index/parent_prefix_path/tutorial_pkg\n'}
+[26.148891] (tutorial_pkg) StdoutLine: {'line': b'-- Symlinking: /ws/install_humble/tutorial_pkg/share/tutorial_pkg/environment/ament_prefix_path.sh\n'}
+[26.170614] (tutorial_pkg) StdoutLine: {'line': b'-- Symlinking: /ws/install_humble/tutorial_pkg/share/tutorial_pkg/environment/ament_prefix_path.dsv\n'}
+[26.193591] (tutorial_pkg) StdoutLine: {'line': b'-- Symlinking: /ws/install_humble/tutorial_pkg/share/tutorial_pkg/environment/path.sh\n'}
+[26.198615] (-) TimerEvent: {}
+[26.217652] (tutorial_pkg) StdoutLine: {'line': b'-- Symlinking: /ws/install_humble/tutorial_pkg/share/tutorial_pkg/environment/path.dsv\n'}
+[26.238570] (tutorial_pkg) StdoutLine: {'line': b'-- Symlinking: /ws/install_humble/tutorial_pkg/share/tutorial_pkg/local_setup.bash\n'}
+[26.257643] (tutorial_pkg) StdoutLine: {'line': b'-- Symlinking: /ws/install_humble/tutorial_pkg/share/tutorial_pkg/local_setup.sh\n'}
+[26.276630] (tutorial_pkg) StdoutLine: {'line': b'-- Symlinking: /ws/install_humble/tutorial_pkg/share/tutorial_pkg/local_setup.zsh\n'}
+[26.297091] (tutorial_pkg) StdoutLine: {'line': b'-- Symlinking: /ws/install_humble/tutorial_pkg/share/tutorial_pkg/local_setup.dsv\n'}
+[26.298694] (-) TimerEvent: {}
+[26.318732] (tutorial_pkg) StdoutLine: {'line': b'-- Symlinking: /ws/install_humble/tutorial_pkg/share/tutorial_pkg/package.dsv\n'}
+[26.342802] (tutorial_pkg) StdoutLine: {'line': b'-- Symlinking: /ws/install_humble/tutorial_pkg/share/ament_index/resource_index/packages/tutorial_pkg\n'}
+[26.361049] (tutorial_pkg) StdoutLine: {'line': b'-- Symlinking: /ws/install_humble/tutorial_pkg/share/tutorial_pkg/cmake/tutorial_pkgConfig.cmake\n'}
+[26.381292] (tutorial_pkg) StdoutLine: {'line': b'-- Symlinking: /ws/install_humble/tutorial_pkg/share/tutorial_pkg/cmake/tutorial_pkgConfig-version.cmake\n'}
+[26.398885] (-) TimerEvent: {}
+[26.400061] (tutorial_pkg) StdoutLine: {'line': b'-- Symlinking: /ws/install_humble/tutorial_pkg/share/tutorial_pkg/package.xml\n'}
+[26.418846] (tutorial_pkg) CommandEnded: {'returncode': 0}
+[26.497352] (tutorial_pkg) JobEnded: {'identifier': 'tutorial_pkg', 'rc': 0}
+[26.498795] (-) EventReactorShutdown: {}
