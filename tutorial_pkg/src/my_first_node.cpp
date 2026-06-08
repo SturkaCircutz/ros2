@@ -1,5 +1,9 @@
 #include "rclcpp/rclcpp.hpp"
 #include "sensor_msgs/msg/image.hpp"
+#include "std_msgs/msg/u_int8.hpp"
+
+#include <algorithm>
+#include <cmath>
 
 // in order to process msg from the camera
 using namespace std::placeholders;
@@ -14,6 +18,8 @@ class MyNode : public rclcpp::Node
             auto qos = rclcpp::QoS(10).reliable();
             subscriber_ = create_subscription<sensor_msgs::msg::Image>(
                 "/image", qos, std::bind(&MyNode::image_callback, this, _1));
+            
+                publisher_ = create_publisher<std_msgs::msg::UInt8>("/brightness", rclcpp::SensorDataQos());
             RCLCPP_INFO(get_logger(), "node started!");
         }
     private:
@@ -27,11 +33,19 @@ class MyNode : public rclcpp::Node
             for(uint8_t value : image->data){
                 sum+=value;
             }
+
             double avg = static_cast<double>(sum) / image->data.size();
+            
+
+            std_msgs::msg::UInt8 brightness_msg;
+            brightness_msg.data = avg;
+            publisher_->publish(brightness_msg);
+
             RCLCPP_INFO(get_logger(), "brightness average: %.2f", avg);
         }
 
         rclcpp::Subscription<sensor_msgs::msg::Image>::SharedPtr subscriber_;
+        
 };
 
 int main(int argc, char ** argv){
