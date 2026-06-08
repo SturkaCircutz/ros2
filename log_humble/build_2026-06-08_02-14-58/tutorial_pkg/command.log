@@ -1,4 +1,0 @@
-Invoking command in '/ws/build_humble/tutorial_pkg': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /ws/tutorial_pkg -DCMAKE_INSTALL_PREFIX=/ws/install_humble/tutorial_pkg
-Invoked command in '/ws/build_humble/tutorial_pkg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /ws/tutorial_pkg -DCMAKE_INSTALL_PREFIX=/ws/install_humble/tutorial_pkg
-Invoking command in '/ws/build_humble/tutorial_pkg': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /ws/build_humble/tutorial_pkg -- -j32 -l32
-Invoked command in '/ws/build_humble/tutorial_pkg' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /ws/build_humble/tutorial_pkg -- -j32 -l32
